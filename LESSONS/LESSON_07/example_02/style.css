@@ -1,0 +1,107 @@
+.nav-items-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 28px;
+}
+.berlin.de {
+  display: block;
+  font-weight: normal;
+}
+* {
+  box-sizing: border-box;
+}
+header{
+    height: 120px;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 10;
+
+}
+.left-nav-element {
+  display: flex;
+  flex-direction: column;
+}
+ul {
+  list-style: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    
+}
+
+.cards {
+  
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+.card {
+    margin: 30px;
+  width: 400px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContentFooter{
+  box-shadow: 0 5px 9px 5px gray;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  justify-content: space-around;
+  padding: 25px;
+  height: 200px;
+  align-items: center;
+
+}
+
+.ContentFooter2{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(89, 89, 89);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  justify-content: space-around;
+  padding: 25px;
+  height: 200px;
+  align-items: center;
+  color: whitesmoke;
+
+}
+

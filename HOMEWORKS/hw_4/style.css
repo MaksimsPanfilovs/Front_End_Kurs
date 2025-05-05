@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:rgba(205, 134, 63, 0.507);
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400; /* Ширина шрифта : 100 - 900 */
+  font-style: normal;
+  
+}
+
+header {
+    background-image: url("./images/Coffee.jpg");
+    height: 480px;
+    background-position: center; /* Сопоставление центра элемента с центром фонового изображения */
+    background-size: cover; /* Выравнивание элемента и фоновой картинки по одной из осей (X или Y) */
+    /* background-repeat: no-repeat; */
+}
+
+h1 {
+  color:chocolate;
+  text-align: left;
+  padding: 5rem;
+}
+
+#Brasil {
+  background-image: url(./images/960px-Flag_of_Brazil.svg.png);
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  margin: 5rem auto;
+}

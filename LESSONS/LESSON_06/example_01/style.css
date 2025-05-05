@@ -1,0 +1,33 @@
+.card {
+    background-color: lightcoral;
+    padding: 14px;
+    /* margin: 20px; */
+    border-radius: 18px;
+    height: 400px;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    /* justify-content - выравнивает по основной оси */
+    /* flex-end - в конце */
+    /* flex-start - в начале */
+    /* center - в середине - слиплись */
+    /* space-around - элементы распределены более равномерно */
+    /* space-between - все пустое между элементами */
+    justify-content: center;
+    gap: 20px;
+}
+
+.container-2 {
+    display: flex;
+    /* row = строка, column = столбец */
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 50px;
+}
