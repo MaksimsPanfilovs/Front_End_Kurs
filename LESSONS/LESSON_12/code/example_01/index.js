@@ -33,7 +33,7 @@ const favoriteFood = "bamboo";
 
 const panda = {
   name: pandaName,
-  favoriteFood, // short syntax - если имя переменной совпадает с ключом, который мы хотим вывести
+  favoriteFood, // short syntax - если имя переменной совпадает с ключом, который мы хотим выбрать
 };
 
 console.log(panda); // { name: 'Po', favoriteFood: 'bamboo' }
@@ -76,8 +76,8 @@ console.log(entriesOfGiraffe); // [ [ 'name', 'Sam' ], [ 'age', 7 ] ]
 
 // freeze
 const breakfast = {
-    title: "omlet",
-    caloriies: 1200,
+  title: "omlet",
+  caloriies: 1200,
 };
 
 Object.freeze(breakfast);
@@ -93,8 +93,8 @@ breakfast.title = "cereal";
 console.log(breakfast); // { title: 'omlet', caloriies: 1200 }
 
 const dinner = {
-    title: "pasta",
-    colories: 2000,
+  title: "pasta",
+  colories: 2000,
 };
 Object.seal(dinner);
 
@@ -108,20 +108,19 @@ dinner.colories += 200;
 console.log(dinner); // { title: 'pasta', colories: 2200 }
 
 // Object create - можем создавать объекты
-const musician = Object.create({name: "Freddie Mercury" });
+const musician = Object.create({ name: "Freddie Mercury" });
 console.log(musician); // {}
 console.log(musician.name); // Freddie Mercury
-
 
 // поговорим про прототипное наследование позже
 
 const address = {
-    street: "Pfondorfer",
-    number: 12, 
+  street: "Pfondorfer",
+  number: 12,
 };
 
 const firma = {
-    title: "Horns and hoofs",
+  title: "Horns and hoofs",
 };
 
 Object.assign(firma, address); // копирует свойства у адреса и добавляет их в фирму
@@ -134,17 +133,17 @@ console.log(firma); // { title: 'Horns and hoofs', street: 'Pfondorfer', number:
 // Аналог того же самого это spread operator, но немного иначе
 
 const personalInfo = {
-    name: "Fedor",
+  name: "Fedor",
 };
 
 const medicalInfo = {
-    bloodType: 1,
+  bloodType: 1,
 };
 
 const fedor = {
-    ...personalInfo, // скопировали поля из объекта personalInfo
-    ...medicalInfo, // скопировали поля из объекта medicalInfo
-    age: 19,  // указали ручками ключ значение
+  ...personalInfo, // скопировали поля из объекта personalInfo
+  ...medicalInfo, // скопировали поля из объекта medicalInfo
+  age: 19, // указали ручками ключ значение
 };
 
 console.log(fedor); // { name: 'Fedor', bloodType: 1, age: 19 }
@@ -152,35 +151,36 @@ console.log(fedor); // { name: 'Fedor', bloodType: 1, age: 19 }
 // создайте метод - который принимает объект и два параметра типа строка
 // первый из них это будущий ключ, второй будущее значение
 
-// ({email: "bob@gmail.com"}, eyeColor, "brown") 
+// Пусть метод возвращает новый объект с добавлением указанного поля со значением.
+
+// ({email: "bob@gmail.com"}, eyeColor, "brown")
 // ---> {email: "bob@gmail.com", eyeColor:"brown"}
 
 // const bob = {
-    // email: "bob@gmail.com",
+// email: "bob@gmail.com",
 // };
 // function unify (obj, eyeColor, "brown") {
-    // const unifyObj = {
-        // ...bob,
-        // eyeColor: 
-    // }
+// const unifyObj = {
+// ...bob,
+// eyeColor:
 // }
-// 
+// }
+//
 // unify(email, "bob@gmail.com");
 
-function unify (obj, additionalKey, additionalValue) {
-    // const newObj = {...obj};
-    // newObj[additionalKey] = additionalValue;
-    // return newObj;
+function unify(obj, additionalKey, additionalValue) {
+  // const newObj = {...obj};
+  // newObj[additionalKey] = additionalValue;
+  // return newObj;
 
-    return {...obj, [additionalKey]: additionalValue};
+  return { ...obj, [additionalKey]: additionalValue };
 }
 
 const unify2 = (obj, additionalKey, additionalValue) => {
-    return {...obj, [additionalKey]: additionalValue};
-}
+  return { ...obj, [additionalKey]: additionalValue };
+};
 
-
-const book = {title: "The Lord Of The Rings"};
+const book = { title: "The Lord Of The Rings" };
 const newBook = unify(book, "author", "Tolkien JR");
 
 newBook.title = "Harry Potter";
