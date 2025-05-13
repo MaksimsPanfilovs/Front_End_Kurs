@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="add-animal-form" class="add-animal-form">
+      <label for="nickname-input">Nickname</label>
+      <input type="text" name="nickname" id="nickname-input" />
+
+      <label>
+        Age
+        <input type="text" name="age" id="age-input" />
+      </label>
+
+      <label>Breed</label>
+      <input type="text" name="breed" />
+
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+
+    <ul id="animals-list" class="animals-container"></ul>
+    <button id="clear-btn" class="clear-btn" type="button">Clear</button>
+  </body>
+</html>
