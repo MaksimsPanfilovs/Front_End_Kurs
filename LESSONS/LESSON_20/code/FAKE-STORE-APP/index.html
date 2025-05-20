@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./JS/home.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake store app</title>
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <nav class="user-nav">
+      <a href="/login">Login</a>
+      <a href="/register/">Register User</a>
+      <a href="/create-product">Create Product</a>
+    </nav>
+    <main>
+      <form id="filter-form">
+        <select name="category" id="category-select">
+          <!-- <option value="1">Clothes</option> -->
+          <!-- <option value="2">Electronics</option> -->
+        </select>
+        <button type="submit">Apply filters</button>
+      </form>
+      <div id="products-container" class="products-container"></div>
+    </main>
+  </body>
+</html>

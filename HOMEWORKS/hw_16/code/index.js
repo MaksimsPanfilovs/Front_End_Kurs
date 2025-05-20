@@ -12,18 +12,38 @@
 // validate("c1886born"); // false — не 19XX
 // validate("c1986bor"); // false — не заканчивается на 'born'
 
+function validate(word) {
+  const regex = /^[a-z]19[0-9]{2}born$/;
+  //   if (word.match(regex)) {
+  //     return true;
+  //   }
+  //   return false;
+  return regex.test(word);
+}
+
+console.log(validate("c1986born"));
+
+// task 2
+
+const sentence =
+  "JavaScript is great. I love javascript. JAVASCRIPT is everywhere!";
+
+const res = sentence.replace(/JavaScript/gi, "TypeScript");
+console.log(res);
+
+
 
 
 // ✂️ Задание 2 : Замена слова в строке
 // 🎯 Цель:
 // Научиться использовать string.replace() с регулярными выражениями и флагами g и i.
-// 
+//
 // 📘 Условие:
 // У вас есть строка:
-// 
+//
 // const sentence = "JavaScript is great. I love javascript. JAVASCRIPT is everywhere!";
 
 // Замените все вхождения слова "javascript", независимо от регистра, на слово "TypeScript".
-// 
+//
 // 🔍 Ожидаемый результат:
 // "TypeScript is great. I love TypeScript. TypeScript is everywhere!"

@@ -52,5 +52,19 @@ ul li {
     }
     ul {
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #FFE44D;
+        gap: 20px;
+        width: 120px;
+        transform: translateX(100%);
+    }
+    ul.nav_active {
+        transform: translateX(0);
+    }
+    ul li {
+        border-bottom: 1px solid black;
+        padding: 15px;
     }
 }
